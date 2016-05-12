@@ -18,7 +18,7 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
 
 
         if((spinner.getId() == R.id.spinner) & ( (Spinner) (spinner.getId()).getItemIdAtPosition(position).toString() == "Uit") ){
-
+        //Test nieuwe branch hallo
         }
 
         switch(spinner.getId()){
