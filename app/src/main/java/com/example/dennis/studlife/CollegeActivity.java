@@ -17,6 +17,7 @@ public class CollegeActivity extends AppCompatActivity {
     public void uitgaan(){
         Intent intent = new Intent(this, UitgaanActivity.class);
         startActivity(intent);
+        //YOLOLOLOL
     }
 
     public void goHome(){
