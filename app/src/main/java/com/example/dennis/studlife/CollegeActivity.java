@@ -18,6 +18,7 @@ public class CollegeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, UitgaanActivity.class);
         startActivity(intent);
         //YOLOLOLOL
+        //Dit is een verandering in test_roeland, de master branch. Kijken of ik deze kan pullen.
     }
 
     public void goHome(){
