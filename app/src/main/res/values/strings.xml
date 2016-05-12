@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">StudLife</string>
+
+    <string-array name="thuis">
+        <item>College</item>
+        <item>Uitgaan</item>
+    </string-array>
+
+    <string-array name="uit">
+        <item>Huis</item>
+        <item>College</item>
+    </string-array>
+
+    <string-array name="college">
+        <item>Huis</item>
+        <item>Uitgaan</item>
+    </string-array>
 </resources>
