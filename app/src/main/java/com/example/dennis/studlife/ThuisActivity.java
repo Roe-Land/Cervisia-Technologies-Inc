@@ -19,9 +19,6 @@ public class ThuisActivity extends AppCompatActivity {
 
     }
 
-    public void customOnItemSelectedListener(){
-
-    }
 
     public void goCollege(){
         Intent intent = new Intent(this, CollegeActivity.class);
