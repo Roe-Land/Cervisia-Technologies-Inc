@@ -23,27 +23,30 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
 
         switch(spinner.getId()){
             case (R.id.spinner ): {
-                if (spinner.getItemAtPosition(position).toString() == "College"){
+                if (position == 1){
                     goCollege();
-                } else if (spinner.getItemAtPosition(position).toString() == "Uitgaan") {
+                } else if (position == 2) {
                     uitgaan();
                 }
-            }
-            case R.id.spinner3 : {
-                if (spinner.getItemAtPosition(position).toString() == "Huis"){
-                    goHome();
-                }
-                else if (spinner.getItemAtPosition(position).toString() == "College"){
-                    goCollege();
-                }
+                break;
             }
             case R.id.spinner2 : {
-                if (spinner.getItemAtPosition(position).toString() == "Huis"){
+                if (position == 1){
                     goHome();
                 }
-                else if (spinner.getItemAtPosition(position).toString() == "Uitgaan"){
+                else if (position == 2){
                     uitgaan();
                 }
+                break;
+            }
+            case R.id.spinner3 : {
+                if (position == 1){
+                    goHome();
+                }
+                if (position == 2){
+                    goCollege();
+                }
+                break;
             }
         }
 

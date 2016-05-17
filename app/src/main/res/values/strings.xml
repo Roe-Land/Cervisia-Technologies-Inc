@@ -2,7 +2,7 @@
     <string name="app_name">StudLife</string>
 
     <string-array name="thuis">
-        <item>Thuis</item>
+        <item>Huis</item>
         <item>College</item>
         <item>Uitgaan</item>
     </string-array>
