@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="college">
+        <item>College</item>
         <item>Huis</item>
         <item>Uitgaan</item>
     </string-array>
     <string-array name="thuis">
+        <item>Thuis</item>
         <item>College</item>
         <item>Uitgaan</item>
     </string-array>
     <string-array name="uit">
+        <item>Uitgaan</item>
         <item>Huis</item>
         <item>College</item>
     </string-array>
