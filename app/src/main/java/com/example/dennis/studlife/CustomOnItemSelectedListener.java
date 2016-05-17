@@ -49,15 +49,12 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
                 break;
             }
         }
-
-
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
 
     public void goHome(){
         Intent intent = new Intent(from, ThuisActivity.class);
