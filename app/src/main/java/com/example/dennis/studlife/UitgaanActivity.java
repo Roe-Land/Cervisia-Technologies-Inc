@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Spinner;
 
 public class UitgaanActivity extends AppCompatActivity {
 
@@ -12,17 +13,10 @@ public class UitgaanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uitgaan);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner3);
+        spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener(this));
     }
 
-    public void goHome(){
-        Intent intent = new Intent(this, ThuisActivity.class);
-        startActivity(intent);
-    }
-
-    public void goCollege(){
-        Intent intent = new Intent(this, CollegeActivity.class);
-        startActivity(intent);
-    }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override

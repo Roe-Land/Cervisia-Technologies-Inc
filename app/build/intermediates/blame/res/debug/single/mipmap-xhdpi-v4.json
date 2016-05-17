@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Roeland Sjoerd Hoefs\\Downloads\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Roeland Sjoerd Hoefs\\Downloads\\StudLife\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
