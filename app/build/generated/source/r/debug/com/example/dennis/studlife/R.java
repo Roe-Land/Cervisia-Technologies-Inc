@@ -1616,7 +1616,11 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020048;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020049;
         public static final int abc_textfield_search_material=0x7f02004a;
-        public static final int notification_template_icon_bg=0x7f02004b;
+        public static final int notification_template_icon_bg=0x7f02004f;
+        public static final int stud1=0x7f02004b;
+        public static final int stud2=0x7f02004c;
+        public static final int stud3=0x7f02004d;
+        public static final int studanimation=0x7f02004e;
     }
     public static final class id {
         public static final int action0=0x7f0d0055;
@@ -1638,7 +1642,6 @@ containing a value of this type.
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d001c;
         public static final int beginning=0x7f0d0019;
-        public static final int button=0x7f0d0052;
         public static final int buttonPanel=0x7f0d002b;
         public static final int cancel_action=0x7f0d0056;
         public static final int checkbox=0x7f0d0039;
@@ -1691,6 +1694,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f0d004a;
         public static final int search_voice_btn=0x7f0d004e;
         public static final int select_dialog_listview=0x7f0d004f;
+        public static final int selected=0x7f0d0062;
         public static final int shortcut=0x7f0d003a;
         public static final int showCustom=0x7f0d000f;
         public static final int showHome=0x7f0d0010;
@@ -1704,6 +1708,7 @@ containing a value of this type.
         public static final int src_in=0x7f0d0017;
         public static final int src_over=0x7f0d0018;
         public static final int status_bar_latest_event_content=0x7f0d0057;
+        public static final int studanimation=0x7f0d0052;
         public static final int submit_area=0x7f0d004c;
         public static final int tabMode=0x7f0d000b;
         public static final int text=0x7f0d005f;
