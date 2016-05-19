@@ -11,10 +11,12 @@ import android.content.Intent;
  * Created by dennis on 12-5-2016.
  */
 public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
-    private Context from;
+    private Activity from;
+    private Student student;
 
-    public CustomOnItemSelectedListener(Context a){
-        this.from = a;
+    public CustomOnItemSelectedListener(Context a, Student student){
+        this.from = (Activity) a;
+        this.student = student;
     }
 
     @Override
@@ -58,17 +60,23 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
 
     public void goHome(){
         Intent intent = new Intent(from, ThuisActivity.class);
+        student.save(from);
         from.startActivity(intent);
+        from.finish();
     }
 
     public void goCollege(){
         Intent intent = new Intent(from, CollegeActivity.class);
+        student.save(from);
         from.startActivity(intent);
+        from.finish();
     }
 
     public void uitgaan(){
         Intent intent = new Intent(from, UitgaanActivity.class);
+        student.save(from);
         from.startActivity(intent);
+        from.finish();;
     }
 
 }
