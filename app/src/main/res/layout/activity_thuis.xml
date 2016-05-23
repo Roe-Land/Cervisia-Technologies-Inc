@@ -60,6 +60,7 @@
 
         android:progressTint="#ff0000"/>
 
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -69,6 +70,7 @@
         android:background="@drawable/hart"
         />
 
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -77,6 +79,7 @@
         android:layout_alignLeft="@id/progressBar2"
         android:background="@drawable/smiley"/>
 
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -84,5 +87,8 @@
         android:background="@drawable/bliksem"
         android:layout_marginTop="1dp"
         android:layout_alignLeft="@id/progressBar"/>
+
+
+
 
 </RelativeLayout>

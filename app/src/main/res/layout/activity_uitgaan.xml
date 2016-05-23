@@ -59,6 +59,7 @@
 
         android:progressTint="#ff0000"/>
 
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -83,5 +84,13 @@
         android:background="@drawable/bliksem"
         android:layout_marginTop="1dp"
         android:layout_alignLeft="@id/progressBar4"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/bier2"
+        android:background="@drawable/bier2"
+        android:layout_alignParentBottom="true"
+        android:onClick="drinkBier"/>
 
 </RelativeLayout>

@@ -4,43 +4,29 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="37224495824896"
-    verifier="METHOD_ADDED" >
+    timestamp="109930642239689" >
 
     <task
         name="javac"
-        duration="636" />
+        duration="1638" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="275" />
+        duration="1214" />
     <task
         name="verifier"
-        duration="46" />
+        duration="316" />
 
     <artifact
-        location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
+        location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="35610738082519" >
+    <build timestamp="109930642239689" >
         <artifact
             location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="37224495824896"
-        verifier="METHOD_ADDED" >
-        <artifact
-            location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

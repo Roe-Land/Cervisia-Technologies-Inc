@@ -1,6 +1,8 @@
 package com.example.dennis.studlife;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 import java.io.Serializable;
@@ -22,7 +24,7 @@ public class Student {
     private int socialeGod;
     private int studieVoortgang;
 
-    private Student student;
+
 
     public Student(){
         this.gezondheid = 100;
@@ -52,16 +54,22 @@ public class Student {
         return  studieVoortgang;
     }
 
-    public void setGezondheid(int g){
+    public void setGezondheid(int g, Context context){
         gezondheid = g;
+        setMax();
+        checkDead(context);
     }
 
-    public void setGeluk(int g){
+    public void setGeluk(int g, Context context){
         geluk = g;
+        setMax();
+        checkDead(context);
     }
 
-    public void setEnergie(int e){
+    public void setEnergie(int e, Context context){
         energie = e;
+        setMax();
+        checkDead(context);
     }
 
     public void setSocialeGod(int s){
@@ -88,12 +96,32 @@ public class Student {
         int i = 100;
         int j = 0;
         Student student = new Student();
-        SharedPreferences barsAndTime = context.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences barsAndTime = ((Activity)context).getSharedPreferences(PREFS_NAME, 0);
         student.gezondheid = barsAndTime.getInt(PREFS_GEZONDHEID, i);
         student.geluk = barsAndTime.getInt(PREFS_GELUK, i);
         student.energie = barsAndTime.getInt(PREFS_ENERGIE, i);
         student.socialeGod = barsAndTime.getInt(PREFS_SOCIALEGOD, j);
         student.studieVoortgang = barsAndTime.getInt(PREFS_STUDIEVOORTGANG, j);
         return student;
+    }
+
+    public void checkDead(Context context){
+        if((geluk <= 0) || (gezondheid <= 0) || (energie <= 0)){
+            Intent intent = new Intent((Activity)context, GameOverActivity.class);
+            context.startActivity(intent);
+            ((Activity)context).finish();
+        }
+    }
+
+    private void setMax(){
+        if (gezondheid > 100){
+            gezondheid = 100;
+        }
+        if (geluk > 100){
+            geluk = 100;
+        }
+        if(energie > 100){
+            energie = 100;
+        }
     }
 }

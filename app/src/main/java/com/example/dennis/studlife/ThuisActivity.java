@@ -14,41 +14,52 @@ import android.widget.Spinner;
 public class ThuisActivity extends AppCompatActivity{
     public static final String PREFS_NAME = "MyPrefsFile";
     private Student student;
-    private boolean newGame = false;
+    private ProgressBar een;
+    private ProgressBar twee;
+    private ProgressBar drie;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thuis);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        student = student.get(this);
+        student.checkDead(this);
+
         spinner.setOnItemSelectedListener( new CustomOnItemSelectedListener(this, student));
-        if (newGame){
-            student = student.get(this);
-        }else{
-            this.student = new Student();
-            newGame = true;
-        }
-        ProgressBar een = (ProgressBar) findViewById(R.id.progressBar);
-        ProgressBar twee = (ProgressBar) findViewById(R.id.progressBar2);
-        ProgressBar drie = (ProgressBar) findViewById(R.id.progressBar3);
+        een = (ProgressBar) findViewById(R.id.progressBar);
+        twee = (ProgressBar) findViewById(R.id.progressBar2);
+        drie = (ProgressBar) findViewById(R.id.progressBar3);
         een.setProgress(student.getEnergie());
         twee.setProgress(student.getGeluk());
         drie.setProgress(student.getGezondheid());
     }
 
-
+    public void drinkMilk(View v){
+        int u = student.getGezondheid();
+        drie.setProgress( u + 5);
+        student.setGezondheid(u + 5, this);
+    }
 
     @Override
     protected void onStop(){
-        super.onStop();
         student.save(this);
-
-
+        super.onStop();
     }
+
+    @Override
+    public void onDestroy(){
+        student.save(this);
+        super.onDestroy();
+    }
+
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed(){
+        student.save(this);
         finishAffinity();
     }
 
