@@ -10,19 +10,21 @@ import java.io.Serializable;
 /**
  * Created by dennis on 18-5-2016.
  */
-public class Student {
+public class Student implements Serializable{
     private static final String PREFS_NAME = "prefs";
     private static final String PREFS_GEZONDHEID = "gezondheid";
     private static final String PREFS_GELUK = "geluk";
     private static final String PREFS_ENERGIE = "energie";
     private static final String PREFS_SOCIALEGOD = "socialeGod";
     private static final String PREFS_STUDIEVOORTGANG = "studieVoortgang";
+    private static final String PREFS_ISDOODGEGAAN = "isDoodgegaan";
 
     private int gezondheid;
     private int geluk;
     private int energie;
     private int socialeGod;
     private int studieVoortgang;
+    private boolean isDoodgegaan;
 
 
 
@@ -54,6 +56,10 @@ public class Student {
         return  studieVoortgang;
     }
 
+    public boolean getIsDoodgegaan(){
+        return isDoodgegaan;
+    }
+
     public void setGezondheid(int g, Context context){
         gezondheid = g;
         setMax();
@@ -80,8 +86,12 @@ public class Student {
         studieVoortgang = s;
     }
 
+    public void setIsDoodgegaan(boolean a){
+        this.isDoodgegaan = a;
+    }
+
+
     public void save(Context context) {
-        // shared preferences
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(PREFS_GELUK, geluk);
@@ -89,8 +99,22 @@ public class Student {
         editor.putInt(PREFS_ENERGIE, energie);
         editor.putInt(PREFS_SOCIALEGOD, socialeGod);
         editor.putInt(PREFS_STUDIEVOORTGANG, studieVoortgang);
+        editor.putBoolean(PREFS_ISDOODGEGAAN, isDoodgegaan);
         editor.commit();
     }
+
+    public void clear(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(PREFS_GELUK, 100);
+        editor.putInt(PREFS_GEZONDHEID, 100);
+        editor.putInt(PREFS_ENERGIE, 100);
+        editor.putInt(PREFS_SOCIALEGOD, 0);
+        editor.putInt(PREFS_STUDIEVOORTGANG, 0);
+        editor.commit();
+    }
+
+
 
     public static Student get(Context context) {
         int i = 100;
@@ -102,12 +126,14 @@ public class Student {
         student.energie = barsAndTime.getInt(PREFS_ENERGIE, i);
         student.socialeGod = barsAndTime.getInt(PREFS_SOCIALEGOD, j);
         student.studieVoortgang = barsAndTime.getInt(PREFS_STUDIEVOORTGANG, j);
+        student.isDoodgegaan = barsAndTime.getBoolean(PREFS_ISDOODGEGAAN, false);
         return student;
     }
 
     public void checkDead(Context context){
         if((geluk <= 0) || (gezondheid <= 0) || (energie <= 0)){
             Intent intent = new Intent((Activity)context, GameOverActivity.class);
+            intent.putExtra("student", this);
             context.startActivity(intent);
             ((Activity)context).finish();
         }

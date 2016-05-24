@@ -6,7 +6,7 @@ import java.util.Calendar;
 /**
  * Created by dennis on 17-5-2016.
  */
-public class Time {
+public class Time implements Runnable{
     private String startTime;
     private String time;
     private int year;
@@ -17,7 +17,14 @@ public class Time {
     private int seconds;
 
 
-    public Time(){
+    public Time() {
+        Thread thread = new Thread(new Runnable(){
+
+            @Override
+            public void run() {
+
+            }
+        });
         this.time = new SimpleDateFormat("yyyy MM dd HH mm ss").format(Calendar.getInstance().getTime());
         stringToInts(time);
     }
@@ -40,5 +47,10 @@ public class Time {
 
     public String intsToString(){
         return  (year + " " + month + " " + day + " " + hour + " " + minutes + " " + seconds);
+    }
+
+    @Override
+    public void run() {
+
     }
 }
