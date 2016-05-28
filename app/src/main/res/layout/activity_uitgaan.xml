@@ -7,7 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/uitgaan"
     tools:context="com.example.dennis.studlife.UitgaanActivity">
+
 
 
     <Spinner
@@ -92,5 +94,6 @@
         android:background="@drawable/bier2"
         android:layout_alignParentBottom="true"
         android:onClick="drinkBier"/>
+
 
 </RelativeLayout>

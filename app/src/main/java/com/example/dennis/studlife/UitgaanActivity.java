@@ -13,23 +13,30 @@ public class UitgaanActivity extends AppCompatActivity {
     private ProgressBar vier;
     private ProgressBar vijf;
     private ProgressBar zes;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uitgaan);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner3);
         student = student.get(this);
         student.checkDead(this);
+
+        spinner = (Spinner) findViewById(R.id.spinner3);
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener(this, student));
+
+        setProgressBars();
+
+
+    }
+
+    public void setProgressBars(){
         vier = (ProgressBar) findViewById(R.id.progressBar4);
         vijf = (ProgressBar) findViewById(R.id.progressBar5);
         zes = (ProgressBar) findViewById(R.id.progressBar6);
         vier.setProgress(student.getEnergie());
         vijf.setProgress(student.getGeluk());
         zes.setProgress(student.getGezondheid());
-
-
     }
 
     public void drinkBier(View v){
@@ -45,6 +52,7 @@ public class UitgaanActivity extends AppCompatActivity {
     @Override
     protected void onStop(){
         student.save(this);
+        Time.setAppCloses(Time.intsToString());
         super.onStop();
 
     }

@@ -4,20 +4,22 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.view.Menu;
 
 import java.io.Serializable;
+import java.util.Observer;
 
 /**
  * Created by dennis on 18-5-2016.
  */
 public class Student implements Serializable{
-    private static final String PREFS_NAME = "prefs";
     private static final String PREFS_GEZONDHEID = "gezondheid";
     private static final String PREFS_GELUK = "geluk";
     private static final String PREFS_ENERGIE = "energie";
     private static final String PREFS_SOCIALEGOD = "socialeGod";
     private static final String PREFS_STUDIEVOORTGANG = "studieVoortgang";
     private static final String PREFS_ISDOODGEGAAN = "isDoodgegaan";
+    private static final String PREFS_APPCLOSES = "appCloses";
 
     private int gezondheid;
     private int geluk;
@@ -26,15 +28,8 @@ public class Student implements Serializable{
     private int studieVoortgang;
     private boolean isDoodgegaan;
 
-
-
-    public Student(){
-        this.gezondheid = 100;
-        this.geluk = 100;
-        this.energie = 100;
-        this.socialeGod = 0;
-        this.studieVoortgang = 0;
-    }
+    private static final int MAX = 100;
+    private static final int MIN = 0;
 
     public int getGezondheid(){
         return gezondheid;
@@ -90,9 +85,14 @@ public class Student implements Serializable{
         this.isDoodgegaan = a;
     }
 
+    public void newValuesAfterStartUp(Context context){
+        String started = Time.getAppStartedAgain();
+        SharedPreferences sharedPreferences = context.getSharedPreferences(MenuActivity.PREFS_NAME, 0);
+        String appClosed = sharedPreferences.getString(PREFS_APPCLOSES, Time.getAppStartedAgain());
+    }
 
     public void save(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences sharedPreferences = context.getSharedPreferences(MenuActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(PREFS_GELUK, geluk);
         editor.putInt(PREFS_GEZONDHEID, gezondheid);
@@ -100,38 +100,35 @@ public class Student implements Serializable{
         editor.putInt(PREFS_SOCIALEGOD, socialeGod);
         editor.putInt(PREFS_STUDIEVOORTGANG, studieVoortgang);
         editor.putBoolean(PREFS_ISDOODGEGAAN, isDoodgegaan);
+        editor.putString(PREFS_APPCLOSES, Time.appCloses);
         editor.commit();
     }
 
     public void clear(Context context){
-        SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences sharedPreferences = context.getSharedPreferences(MenuActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(PREFS_GELUK, 100);
-        editor.putInt(PREFS_GEZONDHEID, 100);
-        editor.putInt(PREFS_ENERGIE, 100);
-        editor.putInt(PREFS_SOCIALEGOD, 0);
-        editor.putInt(PREFS_STUDIEVOORTGANG, 0);
+        editor.putInt(PREFS_GELUK, MAX);
+        editor.putInt(PREFS_GEZONDHEID, MAX);
+        editor.putInt(PREFS_ENERGIE, MAX);
+        editor.putInt(PREFS_SOCIALEGOD, MIN);
+        editor.putInt(PREFS_STUDIEVOORTGANG, MIN);
         editor.commit();
     }
 
-
-
     public static Student get(Context context) {
-        int i = 100;
-        int j = 0;
         Student student = new Student();
-        SharedPreferences barsAndTime = ((Activity)context).getSharedPreferences(PREFS_NAME, 0);
-        student.gezondheid = barsAndTime.getInt(PREFS_GEZONDHEID, i);
-        student.geluk = barsAndTime.getInt(PREFS_GELUK, i);
-        student.energie = barsAndTime.getInt(PREFS_ENERGIE, i);
-        student.socialeGod = barsAndTime.getInt(PREFS_SOCIALEGOD, j);
-        student.studieVoortgang = barsAndTime.getInt(PREFS_STUDIEVOORTGANG, j);
+        SharedPreferences barsAndTime = ((Activity)context).getSharedPreferences(MenuActivity.PREFS_NAME, 0);
+        student.gezondheid = barsAndTime.getInt(PREFS_GEZONDHEID, MAX);
+        student.geluk = barsAndTime.getInt(PREFS_GELUK, MAX);
+        student.energie = barsAndTime.getInt(PREFS_ENERGIE, MAX);
+        student.socialeGod = barsAndTime.getInt(PREFS_SOCIALEGOD, MIN);
+        student.studieVoortgang = barsAndTime.getInt(PREFS_STUDIEVOORTGANG, MIN);
         student.isDoodgegaan = barsAndTime.getBoolean(PREFS_ISDOODGEGAAN, false);
         return student;
     }
 
     public void checkDead(Context context){
-        if((geluk <= 0) || (gezondheid <= 0) || (energie <= 0)){
+        if((geluk <= MIN) || (gezondheid <= MIN) || (energie <= MIN)){
             Intent intent = new Intent((Activity)context, GameOverActivity.class);
             intent.putExtra("student", this);
             context.startActivity(intent);
@@ -140,14 +137,14 @@ public class Student implements Serializable{
     }
 
     private void setMax(){
-        if (gezondheid > 100){
-            gezondheid = 100;
+        if (gezondheid > MAX){
+            gezondheid = MAX;
         }
-        if (geluk > 100){
-            geluk = 100;
+        if (geluk > MAX){
+            geluk = MAX;
         }
-        if(energie > 100){
-            energie = 100;
+        if(energie > MAX){
+            energie = MAX;
         }
     }
 }

@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ThuisActivity">
+        <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".CollegeActivity" />
         <activity android:name=".UitgaanActivity" />
-        <activity android:name=".GameOverActivity"></activity>
+        <activity android:name=".GameOverActivity" />
+        <activity android:name=".ThuisActivity"></activity>
     </application>
 
 </manifest>

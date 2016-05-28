@@ -10,21 +10,30 @@ import android.widget.Spinner;
 
 public class CollegeActivity extends AppCompatActivity {
     private Student student;
+    private ProgressBar zeven;
+    private ProgressBar acht;
+    private ProgressBar negen;
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-
-
 
         student = student.get(this);
         student.checkDead(this);
+
+        spinner = (Spinner) findViewById(R.id.spinner2);
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener(this, student));
-        ProgressBar zeven = (ProgressBar) findViewById(R.id.progressBar7);
-        ProgressBar acht = (ProgressBar) findViewById(R.id.progressBar8);
-        ProgressBar negen = (ProgressBar) findViewById(R.id.progressBar9);
+
+        setProgressBars();
+
+    }
+
+    public void setProgressBars(){
+        zeven = (ProgressBar) findViewById(R.id.progressBar7);
+        acht = (ProgressBar) findViewById(R.id.progressBar8);
+        negen = (ProgressBar) findViewById(R.id.progressBar9);
         zeven.setProgress(student.getEnergie());
         acht.setProgress(student.getGeluk());
         negen.setProgress(student.getGezondheid());
@@ -33,6 +42,7 @@ public class CollegeActivity extends AppCompatActivity {
     @Override
     protected void onStop(){
         student.save(this);
+        Time.setAppCloses(Time.intsToString());
         super.onStop();
 
     }
