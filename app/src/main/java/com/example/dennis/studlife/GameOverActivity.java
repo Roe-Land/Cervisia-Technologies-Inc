@@ -21,7 +21,9 @@ public class GameOverActivity extends AppCompatActivity {
         Intent stud = getIntent();
         student = (Student) stud.getSerializableExtra("student");
         student.clear(this);
+        student = student.get(this);
         Intent intent = new Intent(this, ThuisActivity.class);
+        intent.putExtra("student", student);
         startActivity(intent);
         finish();
     }

@@ -53,6 +53,8 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
         }
     }
 
+
+
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
@@ -60,21 +62,24 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
 
     public void goHome(){
         Intent intent = new Intent(from, ThuisActivity.class);
-        student.save(from);
+        student.setProgressBars(null, null, null);
+        intent.putExtra("student", student);
         from.startActivity(intent);
         from.finish();
     }
 
     public void goCollege(){
         Intent intent = new Intent(from, CollegeActivity.class);
-        student.save(from);
+        student.setProgressBars(null, null, null);
+        intent.putExtra("student", student);
         from.startActivity(intent);
         from.finish();
     }
 
     public void uitgaan(){
         Intent intent = new Intent(from, UitgaanActivity.class);
-        student.save(from);
+        student.setProgressBars(null, null, null);
+        intent.putExtra("student", student);
         from.startActivity(intent);
         from.finish();;
     }

@@ -15,7 +15,7 @@ public class TimeRunner implements Runnable {
         while(true){
             time.updateTime();
             try {
-                Thread.sleep(900);
+                Thread.sleep(990);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

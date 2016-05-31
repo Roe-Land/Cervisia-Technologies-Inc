@@ -8,6 +8,7 @@ import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
+    private Student student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +21,17 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void toGame(View v){
-        makeTimeThread();
-        Time.setAppStartedAgain(Time.intsToString());
+        student = student.get(this);
+
+        makeTimeThread(student);
+
         Intent intent = new Intent(this, ThuisActivity.class );
+        intent.putExtra("student", student);
         startActivity(intent);
     }
 
-    public void makeTimeThread(){
-        Time time = new Time();
+    public void makeTimeThread(Student student){
+        Time time = new Time(student);
         TimeRunner timeRunner = new TimeRunner(time);
         Thread thread = new Thread(timeRunner);
         thread.start();
