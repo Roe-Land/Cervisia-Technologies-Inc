@@ -12,7 +12,7 @@
         jar="C:\Users\Roeland Sjoerd Hoefs\Downloads\StudLife\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="dd5a22c67de4d6eb69399340b67bdded83dd7b12">
+        sha1="d1cd0040c15e3d1d7b877dbc5d96e896b6fa0ff1">
         <dex dex="C:\Users\Roeland Sjoerd Hoefs\Downloads\StudLife\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_7f6a5e02863f16c614615cd5ac3e458da4b6a473\classes.dex" />
     </item>
     <item
@@ -40,7 +40,7 @@
         jar="C:\Users\Roeland Sjoerd Hoefs\Downloads\StudLife\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="22b3a5ce21d45876b472280e1a5f8355d26147b7">
+        sha1="e9bed1a1cb54bf12bff65bdcf773566e294dae84">
         <dex dex="C:\Users\Roeland Sjoerd Hoefs\Downloads\StudLife\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_277b3961a384b4e2b3f79fd5615d218dc6c96348\classes.dex" />
     </item>
     <item

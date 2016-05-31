@@ -24,7 +24,7 @@
         android:id="@+id/studanimation"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/studanimation"
+        android:background="@drawable/studanimation_kauwen"
         android:adjustViewBounds="true"
         android:scaleType="centerInside" />
 

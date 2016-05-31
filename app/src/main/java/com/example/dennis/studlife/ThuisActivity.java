@@ -34,10 +34,10 @@ public class ThuisActivity extends AppCompatActivity{
     }
 
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    @Override
-    public void onBackPressed(){
+    //@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    //@Override
+    /*public void onBackPressed(){
         finishAffinity();
-    }
+    }*/
 
 }
