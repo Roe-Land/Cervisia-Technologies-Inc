@@ -19,17 +19,31 @@ public class Time{
 
     public void updateTime(){
         time = System.currentTimeMillis();
-        if (student.getStartedWithLife() == 0){
-            student.setStartedWithLife(time);
-        }
         makeProgressBarsValues();
     }
 
     public void makeProgressBarsValues(){
-        boolean changed = false;
         int progressbarEnergy = (int) ((time - student.getStartedWithLife()) / student.getMsPerEnergy());
         int progressbarHealth = (int) ((time - student.getStartedWithLife()) / student.getMsPerHealth());
         int progressbarHappiness = (int) ((time - student.getStartedWithLife()) / student.getMsPerHappiness());
+        boolean changed = testForUpdate(progressbarEnergy, progressbarHealth, progressbarHappiness);
+
+        /*debug  */
+        System.out.println(progressbarEnergy + " " + progressbarHappiness + " " + progressbarHealth);
+        System.out.println(changed);
+        System.out.println(student.getStartedWithLife());
+        System.out.println(time);
+        /* end debug*/
+
+        if (changed){
+            if(student.getContext() != null) {
+                student.updateProgressbars();
+            }
+        }
+    }
+
+    public boolean testForUpdate(int progressbarEnergy, int progressbarHealth, int progressbarHappiness){
+        boolean changed = false;
         if(currentProgressbarEnergy < progressbarEnergy){
             currentProgressbarEnergy = progressbarEnergy;
             student.setEnergyFromTime(currentProgressbarEnergy);
@@ -45,9 +59,7 @@ public class Time{
             student.setHappinessFromTime(currentProgressbarHappiness);
             changed = true;
         }
-        if (changed){
-            student.updateProgressbars();
-        }
+        return changed;
     }
 
 }

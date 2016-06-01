@@ -14,7 +14,7 @@ import android.widget.Spinner;
 
 
 
-public class ThuisActivity extends AppCompatActivity{
+public class ThuisActivity extends AppCompatActivity implements Activitys{
     private Student student;
     private ProgressBar een;
     private ProgressBar twee;
@@ -31,11 +31,13 @@ public class ThuisActivity extends AppCompatActivity{
         student = (Student) getIntent().getSerializableExtra("student");
         student.checkDead(this);
 
+        setProgressBars();
+        student.setClass(this);
+
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener( new CustomOnItemSelectedListener(this, student));
 
-        setProgressBars();
-        student.setProgressBars(drie, twee, een);
+        student.updateProgressbars();
 
         stud = (ImageView) findViewById(R.id.studanimation);
 
@@ -57,11 +59,13 @@ public class ThuisActivity extends AppCompatActivity{
         drie.setProgress(student.getHealth());
     }
 
-    public void drinkMilk(View v){
-        int u = student.getHealth();
-        drie.setProgress( u + 5);
-        student.setGezondheid(u + 5, this);
+    @Override
+    public void setProgressBarsValues(){
+        een.setProgress(student.getEnergy());
+        twee.setProgress(student.getHappiness());
+        drie.setProgress(student.getHealth());
     }
+
 
     @Override
     protected void onStop(){

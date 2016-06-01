@@ -20,9 +20,9 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
-    public void toGame(View v){
+    public void toGame(View v) throws InterruptedException {
         student = student.get(this);
-
+        //student.setStartedWithLife(System.currentTimeMillis()); // ipv dit uit het geheugen
         makeTimeThread(student);
 
         Intent intent = new Intent(this, ThuisActivity.class );
@@ -30,10 +30,11 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void makeTimeThread(Student student){
+    public void makeTimeThread(Student student) throws InterruptedException {
         Time time = new Time(student);
         TimeRunner timeRunner = new TimeRunner(time);
         Thread thread = new Thread(timeRunner);
         thread.start();
+        thread.join();
     }
 }

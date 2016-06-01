@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.view.View;
 
-public class UitgaanActivity extends AppCompatActivity {
+public class UitgaanActivity extends AppCompatActivity implements Activitys {
     private Student student;
     private ProgressBar vier;
     private ProgressBar vijf;
@@ -25,13 +25,13 @@ public class UitgaanActivity extends AppCompatActivity {
         student = (Student) getIntent().getSerializableExtra("student");
         student.checkDead(this);
 
-
+        setProgressBars();
+        student.setClass(this);
 
         spinner = (Spinner) findViewById(R.id.spinner3);
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener(this, student));
 
-        setProgressBars();
-        student.setProgressBars(zes, vijf, vier);
+        student.updateProgressbars();
 
         stud = (ImageView) findViewById(R.id.studanimation);
 
@@ -48,6 +48,13 @@ public class UitgaanActivity extends AppCompatActivity {
         vier = (ProgressBar) findViewById(R.id.progressBar4);
         vijf = (ProgressBar) findViewById(R.id.progressBar5);
         zes = (ProgressBar) findViewById(R.id.progressBar6);
+        vier.setProgress(student.getEnergy());
+        vijf.setProgress(student.getHappiness());
+        zes.setProgress(student.getHealth());
+    }
+
+    @Override
+    public void setProgressBarsValues() {
         vier.setProgress(student.getEnergy());
         vijf.setProgress(student.getHappiness());
         zes.setProgress(student.getHealth());

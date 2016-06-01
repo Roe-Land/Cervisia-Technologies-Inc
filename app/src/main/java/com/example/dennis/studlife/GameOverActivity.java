@@ -20,6 +20,7 @@ public class GameOverActivity extends AppCompatActivity {
     public void newGame(View v){
         Intent stud = getIntent();
         student = (Student) stud.getSerializableExtra("student");
+        student.setIsDoodgegaan(true);
         student.clear(this);
         student = student.get(this);
         Intent intent = new Intent(this, ThuisActivity.class);

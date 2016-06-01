@@ -1,9 +1,12 @@
 package com.example.dennis.studlife;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.view.Menu;
 import android.widget.ProgressBar;
 
@@ -25,7 +28,7 @@ public class Student implements Serializable{
     private static final String PREFS_HAPPINESSFROMTIME = "happinessFromTime";
     private static final String PREFS_ENERGYFROMTIME = "energyFromTime";
     private static final long msPerHealth = 360000;
-    private static final long msPerHappiness = 300000;
+    private static final long msPerHappiness = 3000;
     private static final long msPerEnergy = 480000;
 
     private int health, happiness, energy, socialeGod, studieVoortgang;
@@ -40,10 +43,14 @@ public class Student implements Serializable{
     private int happinessFromTime = 0;
     private int energyFromTime;
 
-    private ProgressBar barHealth, barHappiness, barEnergy;
+    private Activitys context;
 
     private static final int MAX = 100;
     private static final int MIN = 0;
+
+    public Activitys getContext(){
+        return context;
+    }
 
     public long getMsPerHealth(){
         return msPerHealth;
@@ -85,10 +92,8 @@ public class Student implements Serializable{
         return startedWithLife;
     }
 
-    public void setProgressBars(ProgressBar health, ProgressBar happiness, ProgressBar energy){
-        barHealth = health;
-        barHappiness = happiness;
-        barEnergy = energy;
+    public void setClass(Activitys context){
+        this.context = context;
     }
 
 
@@ -140,11 +145,19 @@ public class Student implements Serializable{
 
 
     public void updateProgressbars(){
-        if (barHealth != null){
-            barHealth.setProgress(MAX - healthFromTime - healthNotFromTime);
-            barHappiness.setProgress(MAX - happinessFromTime - happinessNotFromTime);
-            barEnergy.setProgress(MAX - energyFromTime - energyNotFromTime);
-        }
+        System.out.println("hoi");
+        health = MAX - healthFromTime - healthNotFromTime;
+        happiness = MAX - happinessFromTime - happinessNotFromTime;
+        energy = MAX - energyFromTime - energyNotFromTime;
+
+        /* debug*/
+        System.out.println("health: " + healthFromTime + "happiness: " + happinessFromTime + "energy: " + energyFromTime);
+        System.out.println("health: " + health + "happiness: " + happiness + "energy: " + energy);
+        /* end debug*/
+
+        context.setProgressBarsValues();
+
+        checkDead((Context)context);
     }
 
 
@@ -168,15 +181,7 @@ public class Student implements Serializable{
     public void clear(Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences(MenuActivity.PREFS_NAME, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(PREFS_GELUK, MAX);
-        editor.putInt(PREFS_GEZONDHEID, MAX);
-        editor.putInt(PREFS_ENERGIE, MAX);
-        editor.putInt(PREFS_SOCIALEGOD, MIN);
-        editor.putInt(PREFS_STUDIEVOORTGANG, MIN);
-        editor.putLong(PREFS_STARTEDWITHLIFE, MIN);
-        editor.putInt(PREFS_HEALTHFROMTIME, MIN);
-        editor.putInt(PREFS_HAPPINESSFROMTIME, MIN);
-        editor.putInt(PREFS_ENERGYFROMTIME, MIN);
+        editor.clear();
         editor.commit();
     }
 
@@ -188,7 +193,7 @@ public class Student implements Serializable{
         student.energy = barsAndTime.getInt(PREFS_ENERGIE, MAX);
         student.socialeGod = barsAndTime.getInt(PREFS_SOCIALEGOD, MIN);
         student.studieVoortgang = barsAndTime.getInt(PREFS_STUDIEVOORTGANG, MIN);
-        student.isDoodgegaan = barsAndTime.getBoolean(PREFS_ISDOODGEGAAN, false);
+        student.isDoodgegaan = barsAndTime.getBoolean(PREFS_ISDOODGEGAAN, true);
         student.startedWithLife = barsAndTime.getLong(PREFS_STARTEDWITHLIFE, System.currentTimeMillis());
         student.healthFromTime = barsAndTime.getInt(PREFS_HEALTHFROMTIME, MIN);
         student.happinessFromTime = barsAndTime.getInt(PREFS_HAPPINESSFROMTIME, MIN);
@@ -199,6 +204,7 @@ public class Student implements Serializable{
     public void checkDead(Context context){
         if((happiness <= MIN) || (health <= MIN) || (energy <= MIN)){
             Intent intent = new Intent((Activity)context, GameOverActivity.class);
+            this.context = null;
             intent.putExtra("student", this);
             context.startActivity(intent);
             ((Activity)context).finish();
