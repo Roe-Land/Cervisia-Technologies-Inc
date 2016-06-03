@@ -14,27 +14,21 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
     }
 
     public void viewHighscores(View v){
 
     }
 
-    public void toGame(View v) throws InterruptedException {
-        student = student.get(this);
-        //student.setStartedWithLife(System.currentTimeMillis()); // ipv dit uit het geheugen
-        makeTimeThread(student);
+    public void toGame(View v) {
+        ApplicationClass.student = student.get(this);
+        student = ApplicationClass.student;
+        student.makeTimeThread();
 
         Intent intent = new Intent(this, ThuisActivity.class );
-        intent.putExtra("student", student);
         startActivity(intent);
     }
 
-    public void makeTimeThread(Student student) throws InterruptedException {
-        Time time = new Time(student);
-        TimeRunner timeRunner = new TimeRunner(time);
-        Thread thread = new Thread(timeRunner);
-        thread.start();
-        thread.join();
-    }
+
 }

@@ -3,12 +3,15 @@ package com.example.dennis.studlife;
 import android.annotation.TargetApi;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.view.View;
+import android.widget.TextView;
 
 public class UitgaanActivity extends AppCompatActivity implements Activitys {
     private Student student;
@@ -17,15 +20,24 @@ public class UitgaanActivity extends AppCompatActivity implements Activitys {
     private ProgressBar zes;
     private Spinner spinner;
     private ImageView stud;
+    private TextView social;
+    private TextView study;
+    private TextView money;
+    private Handler uiHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg){
+            money.setText(msg.what + " Studs");
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uitgaan);
-        student = (Student) getIntent().getSerializableExtra("student");
+        student = ApplicationClass.student;
         student.checkDead(this);
 
-        setProgressBars();
+        setProgressBarsAndTextViews();
         student.setClass(this);
 
         spinner = (Spinner) findViewById(R.id.spinner3);
@@ -43,21 +55,33 @@ public class UitgaanActivity extends AppCompatActivity implements Activitys {
         });
     }
 
+    public void updateSocialStudy(int socialPoints, int studyPoints){
+        social.setText("Social: " + socialPoints);
+        study.setText("Study: " + studyPoints);
+    }
 
-    public void setProgressBars(){
+
+    public void setProgressBarsAndTextViews(){
         vier = (ProgressBar) findViewById(R.id.progressBar4);
         vijf = (ProgressBar) findViewById(R.id.progressBar5);
         zes = (ProgressBar) findViewById(R.id.progressBar6);
         vier.setProgress(student.getEnergy());
         vijf.setProgress(student.getHappiness());
         zes.setProgress(student.getHealth());
+        money = (TextView) findViewById(R.id.money1);
+        money.setText(student.getMoney() + " Studs");
+        social = (TextView) findViewById(R.id.socialPoints);
+        social.setText("Social: " + student.getSocialeGod());
+        study = (TextView) findViewById(R.id.studyPoints);
+        study.setText("Study: " + student.getStudieVoortgang());
     }
 
     @Override
-    public void setProgressBarsValues() {
+    public void setProgressBarsAndTextViewsValues() {
         vier.setProgress(student.getEnergy());
         vijf.setProgress(student.getHappiness());
         zes.setProgress(student.getHealth());
+        uiHandler.sendMessage(uiHandler.obtainMessage(student.getMoney()));
     }
 
     public void drinkBier(View v){

@@ -5,5 +5,5 @@ package com.example.dennis.studlife;
  */
 public interface Activitys {
 
-    public void setProgressBarsValues();
+    public void setProgressBarsAndTextViewsValues();
 }

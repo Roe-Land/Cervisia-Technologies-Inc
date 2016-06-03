@@ -12,12 +12,12 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\kapsalon.png"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_r.png",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_r.png"
-    },
-    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_r.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_r.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
@@ -30,6 +30,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\college.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\college.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdenniks.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdenniks.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
@@ -58,6 +62,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\smiley.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdensociaal.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdensociaal.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\studanimation.xml",
@@ -114,6 +122,14 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\thuis.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\thuis.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdenbalans.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdenbalans.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdenstudie.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdenstudie.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",

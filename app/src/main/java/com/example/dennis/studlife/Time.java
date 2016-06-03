@@ -12,12 +12,14 @@ public class Time{
     private int currentProgressbarEnergy = 0;
     private int currentProgressbarHealth = 0;
     private int currentProgressbarHappiness = 0;
+    private int currentMoneyGiven = 0;
 
-    public Time(Student student){
-        this.student = student;
-    }
+    //public Time(Student student){
+    //    this.student = student;
+    //}
 
     public void updateTime(){
+        student = ApplicationClass.student;
         time = System.currentTimeMillis();
         makeProgressBarsValues();
     }
@@ -26,14 +28,8 @@ public class Time{
         int progressbarEnergy = (int) ((time - student.getStartedWithLife()) / student.getMsPerEnergy());
         int progressbarHealth = (int) ((time - student.getStartedWithLife()) / student.getMsPerHealth());
         int progressbarHappiness = (int) ((time - student.getStartedWithLife()) / student.getMsPerHappiness());
-        boolean changed = testForUpdate(progressbarEnergy, progressbarHealth, progressbarHappiness);
-
-        /*debug  */
-        System.out.println(progressbarEnergy + " " + progressbarHappiness + " " + progressbarHealth);
-        System.out.println(changed);
-        System.out.println(student.getStartedWithLife());
-        System.out.println(time);
-        /* end debug*/
+        int money = (int) ((((time - student.getStartedWithLife()) / student.getMsPerStufi())+ 1)*100);
+        boolean changed = testForUpdate(progressbarEnergy, progressbarHealth, progressbarHappiness, money);
 
         if (changed){
             if(student.getContext() != null) {
@@ -42,7 +38,7 @@ public class Time{
         }
     }
 
-    public boolean testForUpdate(int progressbarEnergy, int progressbarHealth, int progressbarHappiness){
+    public boolean testForUpdate(int progressbarEnergy, int progressbarHealth, int progressbarHappiness, int money){
         boolean changed = false;
         if(currentProgressbarEnergy < progressbarEnergy){
             currentProgressbarEnergy = progressbarEnergy;
@@ -57,6 +53,11 @@ public class Time{
         if(currentProgressbarHappiness < progressbarHappiness){
             currentProgressbarHappiness = progressbarHappiness;
             student.setHappinessFromTime(currentProgressbarHappiness);
+            changed = true;
+        }
+        if(currentMoneyGiven < money){
+            currentMoneyGiven = money;
+            student.setMoneyFromStufi(currentMoneyGiven);
             changed = true;
         }
         return changed;
