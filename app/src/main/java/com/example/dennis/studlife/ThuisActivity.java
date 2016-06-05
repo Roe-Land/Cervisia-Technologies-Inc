@@ -67,7 +67,6 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
 
 
     public void setProgressBarsAndTextViews(){
-        Handler uiHandler = new Handler();
         een = (ProgressBar) findViewById(R.id.progressBar);
         twee = (ProgressBar) findViewById(R.id.progressBar2);
         drie = (ProgressBar) findViewById(R.id.progressBar3);
@@ -88,7 +87,6 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
         twee.setProgress(student.getHappiness());
         drie.setProgress(student.getHealth());
         uiHandler.sendMessage(uiHandler.obtainMessage(student.getMoney()));
-
     }
 
 

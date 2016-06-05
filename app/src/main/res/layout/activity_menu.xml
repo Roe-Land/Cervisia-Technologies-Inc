@@ -7,26 +7,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/studanimation_homescreen"
+    android:id="@+id/layout"
     tools:context="com.example.dennis.studlife.MenuActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go to game"
-        android:id="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="161dp"
-        android:onClick="toGame"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:text="Highscores"
         android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
+        android:layout_below="@+id/start"
+        android:layout_alignLeft="@+id/start"
+        android:layout_alignStart="@+id/start"
         android:layout_marginTop="71dp"
+        android:background="@drawable/topscores_button"
         android:onClick="viewHighscores"/>
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:id="@+id/start"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/start_button"
+        android:onClick="toGame"/>
 </RelativeLayout>
