@@ -30,8 +30,6 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
         spin.setTextColor(Color.RED);
         spin.setTextSize(20);
 
-
-
         switch(spinner.getId()){
             case (R.id.spinner ): {
                 if (position == 1){

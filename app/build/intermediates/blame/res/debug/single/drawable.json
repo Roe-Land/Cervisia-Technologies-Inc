@@ -1,23 +1,39 @@
 [
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\energie.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\energie.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_1.png",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_1.png"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pizza.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\pizza.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_r.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_r.png"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_1.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_1.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_eten_1.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_eten_1.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chips.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\chips.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdenniks.png",
@@ -28,28 +44,44 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_6.png"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cocktail.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\cocktail.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\peer.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\peer.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_2.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_2.png"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdensociaal.png",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdensociaal.png"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smiley.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\smiley.png"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\overlijdensociaal.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdensociaal.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\studanimation_kauwen.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\studanimation_kauwen.xml"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\studanimation.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\studanimation.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\melk.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\melk.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
@@ -64,6 +96,14 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\brood.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\brood.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shot.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\shot.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\uitgaan.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\uitgaan.png"
     },
@@ -74,6 +114,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\appel.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\appel.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_8.png",
@@ -92,12 +136,24 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hamburger.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hamburger.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bliksem.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\bliksem.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\patat.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\patat.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\toeter.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\toeter.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_sch.png",
@@ -110,6 +166,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wortel.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\wortel.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bier.png",
@@ -156,6 +216,14 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cola.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\cola.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_eten_3.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_eten_3.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hart.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hart.png"
     },
@@ -164,12 +232,16 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_eten_2.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_eten_2.png"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bier2.png",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\bier2.png"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\water.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\water.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -200,12 +272,16 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_4.png",
-        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_4.png"
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\koffie.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\koffie.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_4.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_4.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",

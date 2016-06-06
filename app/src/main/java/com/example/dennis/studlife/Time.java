@@ -1,25 +1,22 @@
 package com.example.dennis.studlife;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 /**
  * Created by dennis on 17-5-2016.
  */
 public class Time{
-    private static long time;
+    public static long time;
     private Student student;
     private int currentProgressbarEnergy = 0;
     private int currentProgressbarHealth = 0;
     private int currentProgressbarHappiness = 0;
-    private int currentMoneyGiven = 0;
+    private float currentMoneyGiven = 0;
 
-    //public Time(Student student){
-    //    this.student = student;
-    //}
+    public Time(){
+        student = ApplicationClass.student;
+    }
 
     public void updateTime(){
-        student = ApplicationClass.student;
         time = System.currentTimeMillis();
         makeProgressBarsValues();
     }
@@ -28,7 +25,7 @@ public class Time{
         int progressbarEnergy = (int) ((time - student.getStartedWithLife()) / student.getMsPerEnergy());
         int progressbarHealth = (int) ((time - student.getStartedWithLife()) / student.getMsPerHealth());
         int progressbarHappiness = (int) ((time - student.getStartedWithLife()) / student.getMsPerHappiness());
-        int money = (int) ((((time - student.getStartedWithLife()) / student.getMsPerStufi())+ 1)*100);
+        float money = (float) ((((time - student.getStartedWithLife()) / student.getMsPerStufi())+ 1)*20);
         boolean changed = testForUpdate(progressbarEnergy, progressbarHealth, progressbarHappiness, money);
 
         if (changed){
@@ -38,7 +35,7 @@ public class Time{
         }
     }
 
-    public boolean testForUpdate(int progressbarEnergy, int progressbarHealth, int progressbarHappiness, int money){
+    public boolean testForUpdate(int progressbarEnergy, int progressbarHealth, int progressbarHappiness, float money){
         boolean changed = false;
         if(currentProgressbarEnergy < progressbarEnergy){
             currentProgressbarEnergy = progressbarEnergy;

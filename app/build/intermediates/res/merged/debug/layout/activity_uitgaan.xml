@@ -13,13 +13,21 @@
 
 
     <Spinner
-        android:layout_width="110dp"
+        android:layout_width="140dp"
         android:layout_height="40dp"
         android:id="@+id/spinner3"
         android:entries="@array/uit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="150dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#8d6e63"/>
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
@@ -90,10 +98,42 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/bier2"
-        android:background="@drawable/bier2"
+        android:id="@+id/bier"
+        android:background="@drawable/bier"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/toeter"
+        android:layout_toRightOf="@+id/bier"
         android:layout_alignParentBottom="true"
-        android:onClick="drinkBier"/>
+        android:background="@drawable/toeter" />
+
+    <ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:id="@+id/hamburger"
+    android:layout_toRightOf="@+id/toeter"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/hamburger"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/patat"
+        android:layout_toRightOf="@+id/hamburger"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/patat"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/pizza"
+        android:layout_toRightOf="@+id/patat"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pizza"/>
+
 
     <ImageView
         android:layout_width="250dp"
@@ -102,6 +142,13 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/studanimation"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:id="@+id/mouth"/>
 
     <TextView
         android:layout_width="80dp"
@@ -124,5 +171,7 @@
         android:id="@+id/socialPoints"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studyPoints" />
+
+
 
 </RelativeLayout>

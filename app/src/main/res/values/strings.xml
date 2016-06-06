@@ -18,4 +18,14 @@
         <item>Huis</item>
         <item>Uitgaan</item>
     </string-array>
+
+    <string-array name="study">
+        <item>0 minuten</item>
+        <item>20 minuten</item>
+        <item>40 minuten</item>
+        <item>60 minuten</item>
+        <item>80 minuten</item>
+        <item>100 minuten</item>
+        <item>120 minuten</item>
+    </string-array>
 </resources>
