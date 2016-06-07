@@ -67,13 +67,13 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
             }
         });
 
-        findViewById(R.id.peer).setOnTouchListener(longClick);
-        findViewById(R.id.melk).setOnTouchListener(longClick);
-        findViewById(R.id.appel).setOnTouchListener(longClick);
-        findViewById(R.id.brood).setOnTouchListener(longClick);
-        findViewById(R.id.wortel).setOnTouchListener(longClick);
+        findViewById(R.id.peer).setOnTouchListener(new OnTouch());
+        findViewById(R.id.melk).setOnTouchListener(new OnTouch());
+        findViewById(R.id.appel).setOnTouchListener(new OnTouch());
+        findViewById(R.id.brood).setOnTouchListener(new OnTouch());
+        findViewById(R.id.wortel).setOnTouchListener(new OnTouch());
 
-        findViewById(R.id.mouth).setOnDragListener(DropListener);
+        findViewById(R.id.mouth).setOnDragListener(new DropListener(stud, this));
     }
 
     public void updateSocialStudy(int socialPoints, int studyPoints){
@@ -126,56 +126,20 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
         finishAffinity();
     }
 
-    View.OnTouchListener longClick = new View.OnTouchListener()
-    {
-        public boolean onTouch (View v, MotionEvent event)
-        {
-            DragShadow dragShadow = new DragShadow(v);
-            ClipData data = ClipData.newPlainText("","");
-            v.startDrag(data,dragShadow,v,0);
-            return false;
-        }
-    };
 
+    public void dropDrinkOrFood(DragEvent event){
+        stud.setBackgroundResource(R.drawable.studanimation_kauwen);
+        ((AnimationDrawable) stud.getBackground()).start();
 
-
-    View.OnDragListener DropListener = new View.OnDragListener()
-    {
-        public boolean onDrag(View v, DragEvent event)
-        {
-            int dragEvent = event.getAction();
-
-            switch (dragEvent)
-            {
-                case DragEvent.ACTION_DRAG_ENTERED:
-                    ((AnimationDrawable) stud.getBackground()).stop();
-                    stud.setBackgroundResource(R.drawable.stud1_eten_1);
-                    Log.i("Drag Event", "Entered");
-                    break;
-
-                case DragEvent.ACTION_DRAG_EXITED:
-                    stud.setBackgroundResource(R.drawable.studanimation);
-                    ((AnimationDrawable) stud.getBackground()).start();
-                    Log.i("Drag Event", "Exited");
-                    break;
-
-                case DragEvent.ACTION_DROP:
-                    Log.i("Drag Event", "Dropped");
-                    stud.setBackgroundResource(R.drawable.studanimation_kauwen);
-                    ((AnimationDrawable) stud.getBackground()).start();
-
-                    animationSwitchHandler.postDelayed(new Runnable(){
-                        public void run(){
-                            stud.setBackgroundResource(R.drawable.studanimation);
-                            ((AnimationDrawable) stud.getBackground()).start();
-                        }
-                    },3000);
-                    ImageView dragged = (ImageView) event.getLocalState();
-                    dropSwitch(dragged, getApplicationContext());
+        animationSwitchHandler.postDelayed(new Runnable(){
+            public void run(){
+                stud.setBackgroundResource(R.drawable.studanimation);
+                ((AnimationDrawable) stud.getBackground()).start();
             }
-            return true;
-        }
-    };
+        },3000);
+        ImageView dragged = (ImageView) event.getLocalState();
+        dropSwitch(dragged, getApplicationContext());
+    }
 
     public void dropSwitch(ImageView v, Context context){
         switch (v.getId()){
@@ -202,22 +166,5 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
         student.updateProgressbars();
     }
 
-    private class DragShadow extends View.DragShadowBuilder
-    {
-        public DragShadow(View view)
-        {
-            super(view);
-        }
-        @Override
-        public void onDrawShadow(Canvas canvas)
-        {
-            super.onDrawShadow(canvas);
-        }
-        @Override
-        public void onProvideShadowMetrics(Point shadowSize, Point shadowTouchPoint)
-        {
-            super.onProvideShadowMetrics(shadowSize, shadowTouchPoint);
-        }
-    }
 
 }

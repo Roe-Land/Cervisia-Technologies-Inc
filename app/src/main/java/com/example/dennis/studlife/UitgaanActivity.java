@@ -63,13 +63,13 @@ public class UitgaanActivity extends AppCompatActivity implements Activitys {
             }
         });
 
-        findViewById(R.id.bier).setOnTouchListener(longClick);
-        findViewById(R.id.pizza).setOnTouchListener(longClick);
-        findViewById(R.id.toeter).setOnTouchListener(longClick);
-        findViewById(R.id.hamburger).setOnTouchListener(longClick);
-        findViewById(R.id.patat).setOnTouchListener(longClick);
+        findViewById(R.id.bier).setOnTouchListener(new OnTouch());
+        findViewById(R.id.pizza).setOnTouchListener(new OnTouch());
+        findViewById(R.id.toeter).setOnTouchListener(new OnTouch());
+        findViewById(R.id.hamburger).setOnTouchListener(new OnTouch());
+        findViewById(R.id.patat).setOnTouchListener(new OnTouch());
 
-        findViewById(R.id.mouth).setOnDragListener(DropListener);
+        findViewById(R.id.mouth).setOnDragListener(new DropListener(stud, this));
     }
 
     public void updateSocialStudy(int socialPoints, int studyPoints){
@@ -117,72 +117,20 @@ public class UitgaanActivity extends AppCompatActivity implements Activitys {
         finishAffinity();
     }
 
-    View.OnTouchListener longClick = new View.OnTouchListener()
-    {
-        public boolean onTouch (View v, MotionEvent event)
-        {
-            DragShadow dragShadow = new DragShadow(v);
-            ClipData data = ClipData.newPlainText("","");
-            v.startDrag(data,dragShadow,v,0);
-            return false;
-        }
-    };
 
-    private class DragShadow extends View.DragShadowBuilder
-    {
-        public DragShadow(View view)
-        {
-            super(view);
-        }
-        @Override
-        public void onDrawShadow(Canvas canvas)
-        {
-            super.onDrawShadow(canvas);
-        }
-        @Override
-        public void onProvideShadowMetrics(Point shadowSize, Point shadowTouchPoint)
-        {
-            super.onProvideShadowMetrics(shadowSize, shadowTouchPoint);
-        }
-    }
+    public void dropDrinkOrFood(DragEvent event){
+        stud.setBackgroundResource(R.drawable.studanimation_kauwen);
+        ((AnimationDrawable) stud.getBackground()).start();
 
-    View.OnDragListener DropListener = new View.OnDragListener()
-    {
-        public boolean onDrag(View v, DragEvent event)
-        {
-            int dragEvent = event.getAction();
-
-            switch (dragEvent)
-            {
-                case DragEvent.ACTION_DRAG_ENTERED:
-                    ((AnimationDrawable) stud.getBackground()).stop();
-                    stud.setBackgroundResource(R.drawable.stud1_eten_1);
-                    Log.i("Drag Event", "Entered");
-                    break;
-
-                case DragEvent.ACTION_DRAG_EXITED:
-                    stud.setBackgroundResource(R.drawable.studanimation);
-                    ((AnimationDrawable) stud.getBackground()).start();
-                    Log.i("Drag Event", "Exited");
-                    break;
-
-                case DragEvent.ACTION_DROP:
-                    Log.i("Drag Event", "Dropped");
-                    stud.setBackgroundResource(R.drawable.studanimation_kauwen);
-                    ((AnimationDrawable) stud.getBackground()).start();
-
-                    animationSwitchHandler.postDelayed(new Runnable(){
-                        public void run(){
-                            stud.setBackgroundResource(R.drawable.studanimation);
-                            ((AnimationDrawable) stud.getBackground()).start();
-                        }
-                    },3000);
-                    ImageView dragged = (ImageView) event.getLocalState();
-                    dropSwitch(dragged, getApplicationContext());
+        animationSwitchHandler.postDelayed(new Runnable(){
+            public void run(){
+                stud.setBackgroundResource(R.drawable.studanimation);
+                ((AnimationDrawable) stud.getBackground()).start();
             }
-            return true;
-        }
-    };
+        },3000);
+        ImageView dragged = (ImageView) event.getLocalState();
+        dropSwitch(dragged, getApplicationContext());
+    }
 
     public void dropSwitch(ImageView v, Context context){
         switch (v.getId()){

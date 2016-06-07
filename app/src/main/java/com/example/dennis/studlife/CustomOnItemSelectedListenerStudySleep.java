@@ -73,8 +73,6 @@ public class CustomOnItemSelectedListenerStudySleep implements AdapterView.OnIte
                 }
             }
         });
-        //Thread checkSpinners = new Thread(ableSpinners);
-        //checkSpinners.start();
     }
 
     @Override
