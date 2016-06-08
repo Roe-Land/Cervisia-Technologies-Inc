@@ -3,8 +3,6 @@ package com.example.dennis.studlife;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
@@ -12,17 +10,35 @@ import android.content.Intent;
 import android.widget.TextView;
 
 /**
- * Created by dennis on 12-5-2016.
+ *       Android App - StudLife
+ *     Cervisia Technologies Inc.
+ *
+ *      Dennis Kleverwal S4598164
+ *     Richard van Ginkel S4599047
+ *      Roeland Hoefsloot S4629388
+ *
+ * A custom OnItemSelectedListener. Used for switching between various locations(college, home, city) in the app.
  */
 public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
     private Activity from;
-    private Student student;
 
-    public CustomOnItemSelectedListener(Context a, Student student){
+    /**
+     * Constructor. Sets the current context (current location) to a local variable so it can be used.
+     * @param a current context.
+     */
+    public CustomOnItemSelectedListener(Context a){
         this.from = (Activity) a;
-        this.student = student;
     }
 
+    /**
+     * Method used to define which activity to go to after the location is selected in-app.
+     * Calls to several methods defined below, which start the new activities and thus the new locations.
+     *
+     * @param parent The AdapterView
+     * @param view The view
+     * @param position The option that has been selected on the spinner
+     * @param id ID.
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Spinner spinner = (Spinner) parent;
@@ -60,29 +76,39 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
         }
     }
 
-
-
+    /**
+     * Method used to do nothing when nothing is selected.
+     * @param parent
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
 
+    /**
+     * Tells our stud to go home, and let's the app switch to the home activity.
+     */
     public void goHome(){
         Intent intent = new Intent(from, ThuisActivity.class);
         from.startActivity(intent);
         from.finish();
     }
 
+    /**
+     * Tells our stud to go to college, and let's the app switch to the college activity.
+     */
     public void goCollege(){
         Intent intent = new Intent(from, CollegeActivity.class);
         from.startActivity(intent);
         from.finish();
     }
 
+    /**
+     * Tells our stud to go to the bar, and let's the app switch to the city activity.
+     */
     public void uitgaan(){
         Intent intent = new Intent(from, UitgaanActivity.class);
         from.startActivity(intent);
         from.finish();;
     }
-
 }

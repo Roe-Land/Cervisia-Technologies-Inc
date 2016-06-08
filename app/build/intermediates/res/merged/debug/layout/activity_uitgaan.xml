@@ -12,14 +12,7 @@
 
 
 
-    <Spinner
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:id="@+id/spinner3"
-        android:entries="@array/uit"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="150dp" />
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -75,7 +68,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView"
         android:layout_marginTop="33dp"
-        android:layout_alignLeft="@id/progressBar6"
+        android:layout_toLeftOf="@id/progressBar6"
         android:background="@drawable/hart"
         />
 
@@ -84,7 +77,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView2"
         android:layout_marginTop="16dp"
-        android:layout_alignLeft="@id/progressBar5"
+        android:layout_toLeftOf="@id/progressBar5"
         android:background="@drawable/smiley"/>
 
     <ImageView
@@ -93,12 +86,12 @@
         android:id="@+id/imageView3"
         android:background="@drawable/bliksem"
         android:layout_marginTop="1dp"
-        android:layout_alignLeft="@id/progressBar4"/>
+        android:layout_toLeftOf="@id/progressBar4"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/bier"
+        android:id="@+id/beer"
         android:background="@drawable/bier"
         android:layout_alignParentBottom="true" />
 
@@ -106,7 +99,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:id="@+id/toeter"
-        android:layout_toRightOf="@+id/bier"
+        android:layout_toRightOf="@+id/beer"
         android:layout_alignParentBottom="true"
         android:background="@drawable/toeter" />
 
@@ -121,7 +114,7 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/patat"
+        android:id="@+id/fries"
         android:layout_toRightOf="@+id/hamburger"
         android:layout_alignParentBottom="true"
         android:background="@drawable/patat"/>
@@ -130,7 +123,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:id="@+id/pizza"
-        android:layout_toRightOf="@+id/patat"
+        android:layout_toRightOf="@+id/fries"
         android:layout_alignParentBottom="true"
         android:background="@drawable/pizza"/>
 
@@ -171,6 +164,24 @@
         android:id="@+id/socialPoints"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studyPoints" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/dices"
+        android:layout_below="@+id/mouth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="event"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/spinner3"
+        android:entries="@array/uit"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/pizza"
+        android:layout_marginTop="150dp" />
 
 
 

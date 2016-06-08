@@ -20,12 +20,22 @@
     </string-array>
 
     <string-array name="study">
-        <item>0 minuten</item>
-        <item>20 minuten</item>
-        <item>40 minuten</item>
-        <item>60 minuten</item>
-        <item>80 minuten</item>
-        <item>100 minuten</item>
-        <item>120 minuten</item>
+        <item>0 minuten   +0 study -0  energie -0  geluk</item>
+        <item>20 minuten  +1 study -5  energie -7  geluk</item>
+        <item>40 minuten  +2 study -10 energie -14 geluk</item>
+        <item>60 minuten  +3 study -15 energie -21 geluk</item>
+        <item>80 minuten  +4 study -20 energie -28 geluk</item>
+        <item>100 minuten +5 study -25 energie -35 geluk</item>
+        <item>120 minuten +6 study -30 energie -42 geluk</item>
+    </string-array>
+
+    <string-array name="sleeping">
+        <item>0 minuten   +0  energie +0  gezondheid</item>
+        <item>40 minuten  +15 energie +5  gezondheid</item>
+        <item>80 minuten  +30 energie +10 gezondheid</item>
+        <item>120 minuten +45 energie +15 gezondheid</item>
+        <item>160 minuten +60 energie +20 gezondheid</item>
+        <item>200 minuten +75 energie +25 gezondheid</item>
+        <item>240 minuten +90 energie +30 gezondheid</item>
     </string-array>
 </resources>

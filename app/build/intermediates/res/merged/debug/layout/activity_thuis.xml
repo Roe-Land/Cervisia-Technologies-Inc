@@ -12,15 +12,7 @@
 
 
 
-    <Spinner
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:id="@+id/spinner"
-        android:entries="@array/thuis"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="150dp"
-        />
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -76,7 +68,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView"
         android:layout_marginTop="33dp"
-        android:layout_alignLeft="@id/progressBar3"
+        android:layout_toLeftOf="@id/progressBar3"
         android:background="@drawable/hart"
         />
 
@@ -86,7 +78,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView2"
         android:layout_marginTop="16dp"
-        android:layout_alignLeft="@id/progressBar2"
+        android:layout_toLeftOf="@id/progressBar2"
         android:background="@drawable/smiley"/>
 
 
@@ -96,7 +88,7 @@
         android:id="@+id/imageView3"
         android:background="@drawable/bliksem"
         android:layout_marginTop="1dp"
-        android:layout_alignLeft="@id/progressBar"/>
+        android:layout_toLeftOf="@id/progressBar"/>
 
     <ImageView
         android:layout_width="250dp"
@@ -116,41 +108,41 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/melk"
+        android:id="@+id/milk"
         android:background="@drawable/melk"
         android:layout_alignParentBottom="true"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/wortel"
+        android:id="@+id/carrot"
         android:background="@drawable/wortel"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/melk"/>
+        android:layout_toRightOf="@id/milk"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/appel"
+        android:id="@+id/apple"
         android:background="@drawable/appel"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/wortel"/>
+        android:layout_toRightOf="@id/carrot"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/peer"
+        android:id="@+id/pear"
         android:background="@drawable/peer"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/appel"/>
+        android:layout_toRightOf="@id/apple"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/brood"
+        android:id="@+id/bread"
         android:background="@drawable/brood"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/peer"/>
+        android:layout_toRightOf="@id/pear"/>
 
     <TextView
         android:layout_width="80dp"
@@ -172,6 +164,34 @@
         android:id="@+id/socialPoints"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/studyPoints" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/spinner"
+        android:entries="@array/thuis"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/bread"
+        android:layout_marginTop="150dp"
+        />
+
+    <Spinner
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:id="@+id/sleeping"
+        android:layout_below="@+id/studanimation"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/sleeping"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slapen: "
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        android:layout_below="@+id/studanimation"
+        android:layout_toLeftOf="@+id/mouth"
+        android:layout_toStartOf="@+id/mouth" />
 
 
 

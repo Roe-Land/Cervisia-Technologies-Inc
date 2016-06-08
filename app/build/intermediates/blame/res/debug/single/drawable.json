@@ -32,6 +32,10 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\muur_koppen.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\muur_koppen.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chips.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\chips.png"
     },
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_6.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\hs_6.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vechten.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\vechten.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cocktail.png",
@@ -72,6 +80,10 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\overlijdensociaal.png"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dronken_aankoop.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\dronken_aankoop.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\studanimation_kauwen.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\studanimation_kauwen.xml"
     },
@@ -88,12 +100,24 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\topscores_resized.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\topscores_resized.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_button.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\back_button.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\oom_agent.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\oom_agent.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\brood.png",
@@ -160,6 +184,10 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_sch.png"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\new_game.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\new_game.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_l.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_l.png"
     },
@@ -176,6 +204,10 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\bier.png"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\souvenir_scoren.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\souvenir_scoren.png"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
@@ -186,6 +218,14 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dices.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\dices.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rondje_geven.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\rondje_geven.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hs_9.png",
@@ -206,6 +246,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\je_vindt_geld.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\je_vindt_geld.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
@@ -234,6 +278,10 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud1_eten_2.png",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud1_eten_2.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\draken_jagen.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\draken_jagen.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\water.png",
@@ -270,6 +318,18 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stud_slapen.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\stud_slapen.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tactical_barfje.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\tactical_barfje.png"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_ex.png",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\drawable\\app_ex.png"
     },
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\koffie.png",

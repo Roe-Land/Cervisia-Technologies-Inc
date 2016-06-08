@@ -24,10 +24,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.dennis.studlife.CollegeActivity" />
-        <activity android:name="com.example.dennis.studlife.UitgaanActivity" />
-        <activity android:name="com.example.dennis.studlife.GameOverActivity" />
-        <activity android:name="com.example.dennis.studlife.ThuisActivity" />
+        <activity
+            android:name="com.example.dennis.studlife.CollegeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.dennis.studlife.HighscoresActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.dennis.studlife.UitgaanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.dennis.studlife.GameOverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.dennis.studlife.ThuisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.dennis.studlife.Events"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

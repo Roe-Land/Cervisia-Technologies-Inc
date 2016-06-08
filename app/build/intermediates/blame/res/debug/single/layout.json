@@ -156,6 +156,10 @@
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_events.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\layout\\activity_events.xml"
+    },
+    {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
     },
@@ -166,5 +170,9 @@
     {
         "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_highscores.xml",
+        "source": "C:\\Users\\dennis\\AndroidStudioProjects\\StudLife\\app\\src\\main\\res\\layout\\activity_highscores.xml"
     }
 ]

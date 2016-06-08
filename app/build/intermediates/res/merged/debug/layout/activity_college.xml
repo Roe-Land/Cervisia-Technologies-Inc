@@ -10,14 +10,7 @@
     android:background="@drawable/college"
     tools:context="com.example.dennis.studlife.CollegeActivity">
 
-    <Spinner
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:id="@+id/spinner2"
-        android:entries="@array/college"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="150dp" />
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -73,7 +66,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView"
         android:layout_marginTop="33dp"
-        android:layout_alignLeft="@id/progressBar9"
+        android:layout_toLeftOf="@id/progressBar9"
         android:background="@drawable/hart"
         />
 
@@ -82,7 +75,7 @@
         android:layout_height="20dp"
         android:id="@+id/imageView2"
         android:layout_marginTop="16dp"
-        android:layout_alignLeft="@id/progressBar8"
+        android:layout_toLeftOf="@id/progressBar8"
         android:background="@drawable/smiley"/>
 
     <ImageView
@@ -91,7 +84,7 @@
         android:id="@+id/imageView3"
         android:background="@drawable/bliksem"
         android:layout_marginTop="1dp"
-        android:layout_alignLeft="@id/progressBar7"/>
+        android:layout_toLeftOf="@id/progressBar7"/>
 
     <ImageView
         android:layout_width="250dp"
@@ -118,7 +111,7 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/energie"
+        android:id="@+id/energy"
         android:background="@drawable/energie"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/water"/>
@@ -126,26 +119,26 @@
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/cola"
+        android:id="@+id/coke"
         android:background="@drawable/cola"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/energie"/>
+        android:layout_toRightOf="@+id/energy"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/chips"
+        android:id="@+id/crisps"
         android:background="@drawable/chips"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/cola"/>
+        android:layout_toRightOf="@+id/coke"/>
 
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/brood"
+        android:id="@+id/bread"
         android:background="@drawable/brood"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/chips"/>
+        android:layout_toRightOf="@+id/crisps"/>
 
 
 
@@ -178,6 +171,25 @@
         android:layout_below="@+id/studanimation"
         android:layout_centerHorizontal="true"
         android:entries="@array/study"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/spinner2"
+        android:entries="@array/college"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/bread"
+        android:layout_marginTop="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Studeren: "
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        android:layout_below="@+id/studanimation"
+        android:layout_alignLeft="@+id/energy"
+        android:layout_alignStart="@+id/energy" />
 
 
 </RelativeLayout>

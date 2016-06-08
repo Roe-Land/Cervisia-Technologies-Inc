@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidMa
 		INJECTED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:5:5-32:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.3.0] C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
@@ -25,17 +25,17 @@ MERGED from [com.android.support:support-v4:23.3.0] C:\Users\dennis\AndroidStudi
 	android:label
 		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:9:9-41
 	android:supportsRtl
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:11:9-35
 	android:allowBackup
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:7:9-35
 	android:icon
 		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:8:9-43
 	android:largeHeap
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:12:9-33
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:10:9-33
 	android:theme
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:11:9-65
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:12:9-65
 	android:name
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:7:9-41
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:6:9-41
 activity#com.example.dennis.studlife.MenuActivity
 ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:name
@@ -51,21 +51,41 @@ ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:17:27-74
 activity#com.example.dennis.studlife.CollegeActivity
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:20:9-53
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:20:9-21:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:21:13-49
 	android:name
 		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:20:19-50
+activity#com.example.dennis.studlife.HighscoresActivity
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:22:9-23:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:23:13-49
+	android:name
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:22:19-53
 activity#com.example.dennis.studlife.UitgaanActivity
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:21:9-53
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:24:9-25:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:25:13-49
 	android:name
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:21:19-50
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:24:19-50
 activity#com.example.dennis.studlife.GameOverActivity
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:22:9-54
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:26:9-27:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:27:13-49
 	android:name
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:22:19-51
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:26:19-51
 activity#com.example.dennis.studlife.ThuisActivity
-ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:23:9-60
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:28:9-29:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:29:13-49
 	android:name
-		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:23:19-48
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:28:19-48
+activity#com.example.dennis.studlife.Events
+ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:30:9-31:51
+	android:screenOrientation
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml:30:19-41
 uses-sdk
 INJECTED from C:\Users\dennis\AndroidStudioProjects\StudLife\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\dennis\AndroidStudioProjects\StudLife\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78

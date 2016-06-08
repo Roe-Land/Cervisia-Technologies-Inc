@@ -1,124 +1,172 @@
 package com.example.dennis.studlife;
 
 import android.annotation.TargetApi;
-import android.content.ClipData;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.DragEvent;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-
+/**
+ *       Android App - StudLife
+ *     Cervisia Technologies Inc.
+ *
+ *      Dennis Kleverwal S4598164
+ *     Richard van Ginkel S4599047
+ *      Roeland Hoefsloot S4629388
+ *
+ * Thuis activity. This is the home of our stud, where he can get some sleep and a healthy meal.
+ */
 public class ThuisActivity extends AppCompatActivity implements Activitys{
     private Student student;
-    private ProgressBar een;
-    private ProgressBar twee;
-    private ProgressBar drie;
-    private Spinner spinner;
+    private ProgressBar one, two, three;
+    private Spinner spinner, sleepingSpinner;
     private ImageView stud;
-    private TextView social;
-    private TextView study;
-    private TextView money;
-    private Handler animationSwitchHandler = new Handler();
-    private Handler uiHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg){
-            money.setText(msg.what + " Studs");
-        }
-    };
+    private TextView social, study, money;
+    private Handler spinnerHandler, animationSwitchHandler, uiHandler;
 
-
+    /**
+     * OnCreate method.
+     * - Sets the layout.
+     * - Loads in our stud from the application class.
+     * - Checks if our stud is still alive.
+     * - Sets the handlers, views and progressbars.
+     * - Loads in the spinners used for switching locations and sleeping.
+     * - Animates our stud.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thuis);
         student = ApplicationClass.student;
         student.checkDead(this);
-
+        setHandlers();
+        findViews();
         setProgressBarsAndTextViews();
-
         student.setClass(this);
-
-        spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener( new CustomOnItemSelectedListener(this, student));
-
+        spinner.setOnItemSelectedListener( new CustomOnItemSelectedListener(this));
+        sleepingSpinner.setOnItemSelectedListener(new CustomOnItemSelectedListenerStudySleep(student, "sleep", spinner, this, stud));
         student.updateProgressbars();
-
-
-        stud = (ImageView) findViewById(R.id.studanimation);
-
         stud.post(new Runnable(){
             @Override
             public void run(){
                 ((AnimationDrawable) stud.getBackground()).start();
             }
         });
-
-        findViewById(R.id.peer).setOnTouchListener(new OnTouch());
-        findViewById(R.id.melk).setOnTouchListener(new OnTouch());
-        findViewById(R.id.appel).setOnTouchListener(new OnTouch());
-        findViewById(R.id.brood).setOnTouchListener(new OnTouch());
-        findViewById(R.id.wortel).setOnTouchListener(new OnTouch());
-
-        findViewById(R.id.mouth).setOnDragListener(new DropListener(stud, this));
     }
 
-    public void updateSocialStudy(int socialPoints, int studyPoints){
-        social.setText("Social: " + socialPoints);
-        study.setText("Study: " + studyPoints);
+    /**
+     * Creates and sets the handlers so that other threads could do things on the mainthread.
+     */
+    public void setHandlers(){
+        spinnerHandler = new Handler();
+        animationSwitchHandler = new Handler();
+        uiHandler = new Handler(){
+            @Override
+            public void handleMessage(Message msg){
+                money.setText(msg.what + " Euro");
+            }
+        };
     }
 
+    /**
+     * Finds the views for all the objects.
+     */
+    public void findViews(){
+        spinner = (Spinner) findViewById(R.id.spinner);
+        sleepingSpinner = (Spinner) findViewById(R.id.sleeping);
+        stud = (ImageView) findViewById(R.id.studanimation);
+        findViewById(R.id.pear).setOnTouchListener(new OnTouch(student));
+        findViewById(R.id.milk).setOnTouchListener(new OnTouch(student));
+        findViewById(R.id.apple).setOnTouchListener(new OnTouch(student));
+        findViewById(R.id.bread).setOnTouchListener(new OnTouch(student));
+        findViewById(R.id.carrot).setOnTouchListener(new OnTouch(student));
+        findViewById(R.id.mouth).setOnDragListener(new DropListener(stud, this, animationSwitchHandler));
+    }
 
+    /**
+     * Updates the social status and study progess for our stud.
+     */
+    public void updateSocialStudy(){
+        social.setText("Social: " + student.getSocialGod());
+        study.setText("Study: " + student.getStudyProgress());
+    }
+
+    /**
+     * Enables the spinners, and sets our stud to non-sleep mode.
+     */
+    public void setEnable(){
+        spinnerHandler.post(new Runnable(){
+            @Override
+            public void run() {
+                spinner.setEnabled(true);
+                sleepingSpinner.setEnabled(true);
+                student.setIsSleeping(false);
+                stud.setBackgroundResource(R.drawable.studanimation);
+                ((AnimationDrawable) stud.getBackground()).start();
+            }
+        });
+    }
+
+    /**
+     * Method to set all the progressbars to their right value. Initialises them first.
+     * Also updates the textviews which hold the amount of euro's, study status and social status.
+     */
     public void setProgressBarsAndTextViews(){
-        een = (ProgressBar) findViewById(R.id.progressBar);
-        twee = (ProgressBar) findViewById(R.id.progressBar2);
-        drie = (ProgressBar) findViewById(R.id.progressBar3);
-        een.setProgress(student.getEnergy());
-        twee.setProgress(student.getHappiness());
-        drie.setProgress(student.getHealth());
+        one = (ProgressBar) findViewById(R.id.progressBar);
+        two = (ProgressBar) findViewById(R.id.progressBar2);
+        three = (ProgressBar) findViewById(R.id.progressBar3);
+        one.setProgress(student.getEnergy());
+        two.setProgress(student.getHappiness());
+        three.setProgress(student.getHealth());
         money = (TextView) findViewById(R.id.money);
-        money.setText(student.getMoney() + " Studs");
+        money.setText(student.getMoney() + " Euro");
         social = (TextView) findViewById(R.id.socialPoints);
-        social.setText("Social: " + student.getSocialeGod());
+        social.setText("Social: " + student.getSocialGod());
         study = (TextView) findViewById(R.id.studyPoints);
-        study.setText("Study: " + student.getStudieVoortgang());
+        study.setText("Study: " + student.getStudyProgress());
     }
 
+    /**
+     * Method to again set the progressbars and textviewvalues.
+     * This time they are not initialised, and are thus used for updating when
+     * our stud is already at home.
+     */
     @Override
     public void setProgressBarsAndTextViewsValues(){
-        een.setProgress(student.getEnergy());
-        twee.setProgress(student.getHappiness());
-        drie.setProgress(student.getHealth());
+        one.setProgress(student.getEnergy());
+        two.setProgress(student.getHappiness());
+        three.setProgress(student.getHealth());
         uiHandler.sendMessage(uiHandler.obtainMessage((int) student.getMoney()));
     }
 
-
+    /**
+     * Saves the current state when the activity is aborted.
+     */
     @Override
     protected void onStop(){
         student.save(this);
         super.onStop();
     }
 
+    /**
+     * Saves the current state when the activity is destroyed.
+     */
     @Override
     public void onDestroy(){
         student.save(this);
         super.onDestroy();
     }
 
-
+    /**
+     * Saves the current state when the back button on the device is pressed.
+     */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed(){
@@ -126,45 +174,38 @@ public class ThuisActivity extends AppCompatActivity implements Activitys{
         finishAffinity();
     }
 
-
+    /**
+     * Method implemented from Activities. Animates the stud to chew when consumables are fed to him.
+     * @param event The DragEvent.
+     */
     public void dropDrinkOrFood(DragEvent event){
         stud.setBackgroundResource(R.drawable.studanimation_kauwen);
         ((AnimationDrawable) stud.getBackground()).start();
-
-        animationSwitchHandler.postDelayed(new Runnable(){
-            public void run(){
-                stud.setBackgroundResource(R.drawable.studanimation);
-                ((AnimationDrawable) stud.getBackground()).start();
-            }
-        },3000);
-        ImageView dragged = (ImageView) event.getLocalState();
-        dropSwitch(dragged, getApplicationContext());
     }
 
-    public void dropSwitch(ImageView v, Context context){
+    /**
+     * Method implemented from Activities. Differentiates between the different consumables,
+     * so that the progressbars can be updated accordingly.
+     * @param v The consumable.
+     * @param event The DragEvent.
+     */
+    public void dropSwitch(ImageView v, DragEvent event){
         switch (v.getId()){
-            case R.id.melk :
-                student.drinkMilk(context);
+            case R.id.milk :
+                student.eatOrDrink(this, -4, 2, -2, (float) 0.5, false, event);
                 break;
-
-            case R.id.appel :
-                student.eatApple(context);
+            case R.id.apple :
+                student.eatOrDrink(this, -3, 0 , -3, (float) 0.25, false, event);
                 break;
-
-            case R.id.peer :
-                student.eatPear(context);
+            case R.id.pear :
+                student.eatOrDrink(this, -4, 1, -3, (float) 0.25, false, event);
                 break;
-
-            case R.id.wortel :
-                student.eatCarrot(context);
+            case R.id.carrot :
+                student.eatOrDrink(this, -5, 5, -4, (float) 0.5, false, event);
                 break;
-
             default :
-                student.eatBread(context);
+                student.eatOrDrink(this, -2, 0, -3, (float) 0.2, false, event);
                 break;
         }
-        student.updateProgressbars();
     }
-
-
 }
