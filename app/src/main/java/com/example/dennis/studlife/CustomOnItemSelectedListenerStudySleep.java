@@ -50,8 +50,8 @@ public class CustomOnItemSelectedListenerStudySleep implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         this.parent = (Spinner) parent;
-        int minutes = position *2;
-        long ms = minutes*60*100;
+        int minutes = position *20;
+        long ms = minutes*60*1000;
         if (minutes > 0) {
             if (whatToDo == "study") {
                 study(position, ms);
